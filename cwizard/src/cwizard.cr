@@ -230,52 +230,55 @@ def kubernetes_menu
     display_banner
 
     puts TerminalColor.colorize("Kubernetes Operations:", TerminalColor::CYAN)
-    puts TerminalColor.colorize("1. Get Pods with Labels", TerminalColor::YELLOW)
-    puts TerminalColor.colorize("2. Describe Pods with Labels", TerminalColor::YELLOW)
-    puts TerminalColor.colorize("3. Get Services in a Namespace", TerminalColor::YELLOW)
-    puts TerminalColor.colorize("4. Get Deployments in a Namespace", TerminalColor::YELLOW)
-    puts TerminalColor.colorize("5. Get StatefulSets in a Namespace", TerminalColor::YELLOW)
-    puts TerminalColor.colorize("6. Get ConfigMaps in a Namespace", TerminalColor::YELLOW)
-    puts TerminalColor.colorize("7. Get Ingress Resources in a Namespace", TerminalColor::YELLOW)
-    puts TerminalColor.colorize("8. Watch Events in a Namespace", TerminalColor::YELLOW)
-    puts TerminalColor.colorize("9. View Logs of a Pod", TerminalColor::YELLOW)
-    puts TerminalColor.colorize("10. Delete a Kubernetes Resource", TerminalColor::YELLOW)
-    puts TerminalColor.colorize("11. Scale a Deployment", TerminalColor::YELLOW)
-    puts TerminalColor.colorize("12. Apply a YAML Configuration", TerminalColor::YELLOW)
+    puts TerminalColor.colorize("1. Get cluster health", TerminalColor::YELLOW)
+    puts TerminalColor.colorize("2. Get Pods with Labels", TerminalColor::YELLOW)
+    puts TerminalColor.colorize("3. Describe Pods with Labels", TerminalColor::YELLOW)
+    puts TerminalColor.colorize("4. Get Services in a Namespace", TerminalColor::YELLOW)
+    puts TerminalColor.colorize("5. Get Deployments in a Namespace", TerminalColor::YELLOW)
+    puts TerminalColor.colorize("6. Get StatefulSets in a Namespace", TerminalColor::YELLOW)
+    puts TerminalColor.colorize("7. Get ConfigMaps in a Namespace", TerminalColor::YELLOW)
+    puts TerminalColor.colorize("8. Get Ingress Resources in a Namespace", TerminalColor::YELLOW)
+    puts TerminalColor.colorize("9. Watch Events in a Namespace", TerminalColor::YELLOW)
+    puts TerminalColor.colorize("10. View Logs of a Pod", TerminalColor::YELLOW)
+    puts TerminalColor.colorize("11. Delete a Kubernetes Resource", TerminalColor::YELLOW)
+    puts TerminalColor.colorize("12. Scale a Deployment", TerminalColor::YELLOW)
+    puts TerminalColor.colorize("13. Apply a YAML Configuration", TerminalColor::YELLOW)
     puts TerminalColor.colorize("0. Return to Main Menu", TerminalColor::RED)
 
-    print TerminalColor.colorize("Enter your choice (1-12): ", TerminalColor::GREEN)
+    print TerminalColor.colorize("Enter your choice (1-13): ", TerminalColor::GREEN)
     k8s_choice = gets.try(&.to_i) || 0
 
     case k8s_choice
     when 1
-      kubernetes_command_with_optional_namespace("get pods -l", true)
+      check_cluster_health()
     when 2
-      kubernetes_command_with_optional_namespace("describe pods -l", true)
+      kubernetes_command_with_optional_namespace("get pods -l", true)
     when 3
-      kubernetes_command_with_optional_namespace("get svc", true)
+      kubernetes_command_with_optional_namespace("describe pods -l", true)
     when 4
-      kubectl_command_with_namespace("get deployments")
+      kubernetes_command_with_optional_namespace("get svc", true)
     when 5
-      kubectl_command_with_namespace("get statefulsets")
+      kubectl_command_with_namespace("get deployments")
     when 6
-      kubectl_command_with_namespace("get configmaps")
+      kubectl_command_with_namespace("get statefulsets")
     when 7
-      kubectl_command_with_namespace("get ingress")
+      kubectl_command_with_namespace("get configmaps")
     when 8
-      kubectl_watch_namespace("events")
+      kubectl_command_with_namespace("get ingress")
     when 9
-      view_pod_logs
+      kubectl_watch_namespace("events")
     when 10
-      delete_kubernetes_resource
+      view_pod_logs
     when 11
-      scale_deployment
+      delete_kubernetes_resource
     when 12
+      scale_deployment
+    when 13
       apply_yaml_configuration
     when 0
       break
     else
-      puts TerminalColor.colorize("Invalid choice. Please enter a number between 1 and 12.", TerminalColor::RED)
+      puts TerminalColor.colorize("Invalid choice. Please enter a number between 1 and 13.", TerminalColor::RED)
     end
 
     puts TerminalColor.colorize("\nPress enter to continue...", TerminalColor::GREEN)
@@ -283,6 +286,9 @@ def kubernetes_menu
   end
 end
 
+def check_cluster_health
+  system "kubectl get componentstatuses"
+end
 
 def get_pods_with_labels
   print "Enter label selector: "
