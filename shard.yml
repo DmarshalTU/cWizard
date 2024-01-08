@@ -1,0 +1,12 @@
+name: cwizard
+version: 0.1.0
+
+authors:
+  - Denis Tu https://github.com/DmarshalTU/cWizard
+
+description: |
+  A CLI tool for Docker and Kubernetes management
+
+crystal: 0.36.1
+
+license: MIT
