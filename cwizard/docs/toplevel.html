@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.5.1">
+<meta name="crystal_docs.project_version" content="main-dev">
+<meta name="crystal_docs.project_name" content="cwizard">
+
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+  <meta name="repository-name" content="cwizard">
+  <title>Top Level Namespace - cwizard main-dev</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          cwizard
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main-dev
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" current" data-id="cwizard/toplevel" data-name="top level namespace">
+      <a href="toplevel.html">Top Level Namespace</a>
+      
+    </li>
+  
+  <li class=" " data-id="cwizard/TerminalColor" data-name="terminalcolor">
+      <a href="TerminalColor.html">TerminalColor</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  Top Level Namespace
+
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+
+
+
+
+
+
+
+  <h2>
+    <a id="method-summary" class="anchor" href="#method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#apply_yaml_configuration-class-method" class="signature"><strong>apply_yaml_configuration</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#check_cluster_health-class-method" class="signature"><strong>check_cluster_health</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#clear_screen-class-method" class="signature"><strong>clear_screen</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete_kubernetes_resource-class-method" class="signature"><strong>delete_kubernetes_resource</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#describe_pods_with_labels-class-method" class="signature"><strong>describe_pods_with_labels</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#display_banner-class-method" class="signature"><strong>display_banner</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#docker_menu-class-method" class="signature"><strong>docker_menu</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_pods_with_labels-class-method" class="signature"><strong>get_pods_with_labels</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kubectl_command_with_namespace%28command%29-class-method" class="signature"><strong>kubectl_command_with_namespace</strong>(command)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kubectl_top_pod%28namespace%3AString%7CNil%3Dnil%29-class-method" class="signature"><strong>kubectl_top_pod</strong>(namespace : String | Nil = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>K8S</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kubectl_watch_namespace%28resource%3AString%29-class-method" class="signature"><strong>kubectl_watch_namespace</strong>(resource : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kubernetes_command_with_optional_namespace%28command%3AString%2Cneeds_label_selector%3ABool%3Dfalse%29-class-method" class="signature"><strong>kubernetes_command_with_optional_namespace</strong>(command : String, needs_label_selector : Bool = <span class="n">false</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kubernetes_menu-class-method" class="signature"><strong>kubernetes_menu</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#list_docker_containers-class-method" class="signature"><strong>list_docker_containers</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#list_docker_images-class-method" class="signature"><strong>list_docker_images</strong></a>
+        
+          <div class="summary"><p>Docker</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#main_menu-class-method" class="signature"><strong>main_menu</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#scale_deployment-class-method" class="signature"><strong>scale_deployment</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#template_menu-class-method" class="signature"><strong>template_menu</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#view_pod_logs-class-method" class="signature"><strong>view_pod_logs</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+  <h2>
+    <a id="method-detail" class="anchor" href="#method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="apply_yaml_configuration-class-method">
+      <div class="signature">
+        
+        def <strong>apply_yaml_configuration</strong>
+
+        <a class="method-permalink" href="#apply_yaml_configuration-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="check_cluster_health-class-method">
+      <div class="signature">
+        
+        def <strong>check_cluster_health</strong>
+
+        <a class="method-permalink" href="#check_cluster_health-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="clear_screen-class-method">
+      <div class="signature">
+        
+        def <strong>clear_screen</strong>
+
+        <a class="method-permalink" href="#clear_screen-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete_kubernetes_resource-class-method">
+      <div class="signature">
+        
+        def <strong>delete_kubernetes_resource</strong>
+
+        <a class="method-permalink" href="#delete_kubernetes_resource-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="describe_pods_with_labels-class-method">
+      <div class="signature">
+        
+        def <strong>describe_pods_with_labels</strong>
+
+        <a class="method-permalink" href="#describe_pods_with_labels-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="display_banner-class-method">
+      <div class="signature">
+        
+        def <strong>display_banner</strong>
+
+        <a class="method-permalink" href="#display_banner-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="docker_menu-class-method">
+      <div class="signature">
+        
+        def <strong>docker_menu</strong>
+
+        <a class="method-permalink" href="#docker_menu-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_pods_with_labels-class-method">
+      <div class="signature">
+        
+        def <strong>get_pods_with_labels</strong>
+
+        <a class="method-permalink" href="#get_pods_with_labels-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kubectl_command_with_namespace(command)-class-method">
+      <div class="signature">
+        
+        def <strong>kubectl_command_with_namespace</strong>(command)
+
+        <a class="method-permalink" href="#kubectl_command_with_namespace%28command%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kubectl_top_pod(namespace:String|Nil=nil)-class-method">
+      <div class="signature">
+        
+        def <strong>kubectl_top_pod</strong>(namespace : String | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#kubectl_top_pod%28namespace%3AString%7CNil%3Dnil%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>K8S</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kubectl_watch_namespace(resource:String)-class-method">
+      <div class="signature">
+        
+        def <strong>kubectl_watch_namespace</strong>(resource : String)
+
+        <a class="method-permalink" href="#kubectl_watch_namespace%28resource%3AString%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kubernetes_command_with_optional_namespace(command:String,needs_label_selector:Bool=false)-class-method">
+      <div class="signature">
+        
+        def <strong>kubernetes_command_with_optional_namespace</strong>(command : String, needs_label_selector : Bool = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#kubernetes_command_with_optional_namespace%28command%3AString%2Cneeds_label_selector%3ABool%3Dfalse%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kubernetes_menu-class-method">
+      <div class="signature">
+        
+        def <strong>kubernetes_menu</strong>
+
+        <a class="method-permalink" href="#kubernetes_menu-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="list_docker_containers-class-method">
+      <div class="signature">
+        
+        def <strong>list_docker_containers</strong>
+
+        <a class="method-permalink" href="#list_docker_containers-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="list_docker_images-class-method">
+      <div class="signature">
+        
+        def <strong>list_docker_images</strong>
+
+        <a class="method-permalink" href="#list_docker_images-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Docker</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="main_menu-class-method">
+      <div class="signature">
+        
+        def <strong>main_menu</strong>
+
+        <a class="method-permalink" href="#main_menu-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="scale_deployment-class-method">
+      <div class="signature">
+        
+        def <strong>scale_deployment</strong>
+
+        <a class="method-permalink" href="#scale_deployment-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="template_menu-class-method">
+      <div class="signature">
+        
+        def <strong>template_menu</strong>
+
+        <a class="method-permalink" href="#template_menu-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="view_pod_logs-class-method">
+      <div class="signature">
+        
+        def <strong>view_pod_logs</strong>
+
+        <a class="method-permalink" href="#view_pod_logs-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+
+</div>
+
+</body>
+</html>
